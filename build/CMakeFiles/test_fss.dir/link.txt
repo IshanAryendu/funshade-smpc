@@ -1,0 +1,1 @@
+/usr/bin/cc -msse -msse2 -maes -O3 -march=native -O3 -DNDEBUG CMakeFiles/test_fss.dir/funshade/c/test_fss.c.o CMakeFiles/test_fss.dir/funshade/c/fss.c.o CMakeFiles/test_fss.dir/funshade/c/aes.c.o -o test_fss 

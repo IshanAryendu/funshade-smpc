@@ -1,0 +1,3 @@
+/home/macc2025/Desktop/funshade-smpc/build/CMakeFiles/test_fss.dir
+/home/macc2025/Desktop/funshade-smpc/build/CMakeFiles/edit_cache.dir
+/home/macc2025/Desktop/funshade-smpc/build/CMakeFiles/rebuild_cache.dir
