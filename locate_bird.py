@@ -112,10 +112,10 @@ def compute_3d_distance_and_angles_secure(observer, bird, max_val=1000):
     vec2 = np.array([x1_fp, y1_fp, z1_fp], dtype=funshade.DTYPE)
 
     # Print the vectors to observe the contents
-    print("+"*50)
+    print("+" * 50)
     print(f"\nVector 1 (Observer): {vec1}")
     print(f"Vector 2 (Bird): {vec2}\n")
-    print("+"*50)
+    print("+" * 50)
 
     # Create parties
     class Party:
@@ -128,24 +128,28 @@ def compute_3d_distance_and_angles_secure(observer, bird, max_val=1000):
     # Print the party information
     print(f"Party 0 (BP) initialized with j={BP.j}")
     print(f"Party 1 (Gate) initialized with j={Gate.j}")
-    print("+"*50)
+    print("+" * 50)
 
     K = 1
     l = 3  # 3D
 
     # Setup phase (simulate randomness for secure computation)
     d_x0, d_x1, d_y0, d_y1, d_xy0, d_xy1, r_in0, r_in1, k0, k1 = funshade.setup(K, l, 0)
-    print("+"*50)
+    print("+" * 50)
     print("Secure computation setup complete.")
-    print(f"Random values: d_x0={d_x0}, d_y0={d_y0}, d_xy0={d_xy0}, r_in0={r_in0}, k0={k0}")
+    print(
+        f"Random values: d_x0={d_x0}, d_y0={d_y0}, d_xy0={d_xy0}, r_in0={r_in0}, k0={k0}"
+    )
     print(type(d_x0), type(d_y0), type(d_xy0), type(r_in0), type(k0))
     print(d_x0.shape, d_y0.shape, d_xy0.shape, r_in0.shape, k0.shape)
-    print("-"*50)
-    print(f"Random values: d_x1={d_x1}, d_y1={d_y1}, d_xy1={d_xy1}, r_in1={r_in1}, k1={k1}")
+    print("-" * 50)
+    print(
+        f"Random values: d_x1={d_x1}, d_y1={d_y1}, d_xy1={d_xy1}, r_in1={r_in1}, k1={k1}"
+    )
     # Print the information about the random values d_x1, d_y1, d_xy1, r_in1, k1
     print(type(d_x1), type(d_y1), type(d_xy1), type(r_in1), type(k1))
     print(d_x1.shape, d_y1.shape, d_xy1.shape, r_in1.shape, k1.shape)
-    print("-"*50)
+    print("-" * 50)
 
     BP.d_x_j = d_x0
     Gate.d_x_j = d_x1
